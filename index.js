@@ -27,6 +27,12 @@ app.get('/lesson', (req, res) => {
 
 
 })
+app.get('/', (req, res) => {
+    res.send("Melih")
+    res.end()
+
+
+})
 
 
 app.listen(port, () => {
