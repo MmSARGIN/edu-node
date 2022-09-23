@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+let port = process.env.PORT || 3000;
 const cors = require('cors');
 
 const lesson = require('./lesson_model')
@@ -35,6 +35,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(port, () => {
+app.listen((process.env.PORT || 5000), () => {
     console.log(`App running on port ${port}.`)
 })
