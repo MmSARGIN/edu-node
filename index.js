@@ -15,16 +15,17 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', (req, res) => {
-    lesson.getLessons()
-        .then(response => {
-            console.log("resss:", response);
+    // lesson.getLessons()
+    //     .then(response => {
+    //         console.log("resss:", response);
 
-            res.status(200).send(response);
-        })
-        .catch(error => {
-            res.status(500).send(error);
-        })
-
+    //         res.status(200).send(response);
+    //     })
+    //     .catch(error => {
+    //         res.status(500).send(error);
+    //     })
+    res.send("Mal");
+    res.end();
 
 })
 // app.get('/', (req, res) => {
