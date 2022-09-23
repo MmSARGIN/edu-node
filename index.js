@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/lesson', (req, res) => {
+app.get('/', (req, res) => {
     lesson.getLessons()
         .then(response => {
             console.log("resss:", response);
@@ -27,12 +27,12 @@ app.get('/lesson', (req, res) => {
 
 
 })
-app.get('/', (req, res) => {
-    res.send("Melih")
-    res.end()
+// app.get('/', (req, res) => {
+//     res.send("Melih")
+//     res.end()
 
 
-})
+// })
 
 
 app.listen(port, () => {
