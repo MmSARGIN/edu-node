@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/', (req, res) => {
+app.get('/lesson', (req, res) => {
     lesson.getLessons()
         .then(response => {
             console.log("resss:", response);
