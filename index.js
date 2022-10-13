@@ -28,15 +28,8 @@ app.get('/lesson', (req, res) => {
 
 })
 app.get('/test', (req, res) => {
-    lesson.getLessons()
-        .then(response => {
-            console.log("resss:", response);
-
-            res.status(200).send(response);
-        })
-        .catch(error => {
-            res.status(500).send(error);
-        })
+    res.send("test")
+    res.end()
 
 
 })
