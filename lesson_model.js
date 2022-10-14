@@ -17,7 +17,7 @@ const pool = new Pool({
 
 const getLessons = () => {
     return new Promise(function (resolve, reject) {
-        pool.query('SELECT * FROM lesson')
+        pool.query('SELECT * FROM teachers')
             .then(res => {
                 console.log(res.rows)
                 resolve(res.rows);

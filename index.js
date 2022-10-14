@@ -14,7 +14,28 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/lesson', (req, res) => {
+// app.get('/lesson', (req, res) => {
+//     lesson.getLessons()
+//         .then(response => {
+//             console.log("resss:", response);
+
+//             res.status(200).send(response);
+//         })
+//         .catch(error => {
+//             res.status(500).send(error);
+//         })
+
+
+// })
+app.get('/test', (req, res) => {
+    res.send("test")
+    res.end()
+
+
+})
+app.get('/', (req, res) => {
+    // res.send("Melih")
+    // res.end()
     lesson.getLessons()
         .then(response => {
             console.log("resss:", response);
@@ -24,19 +45,6 @@ app.get('/lesson', (req, res) => {
         .catch(error => {
             res.status(500).send(error);
         })
-
-
-})
-app.get('/test', (req, res) => {
-    res.send("test")
-    res.end()
-
-
-})
-app.get('/', (req, res) => {
-    res.send("Melih")
-    res.end()
-
 
 })
 
